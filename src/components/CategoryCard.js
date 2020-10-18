@@ -8,10 +8,14 @@ export default function CategoryCard(props) {
     minWidth: '10rem',
     width: '20vw',
     maxWidth: '20rem',
+    maxHeight: '20rem',
   };
 
   return (
-    <Card className="m-1 shadow" style={style}>
+    <Card
+      className="m-md-1 my-sm-1 my-xs-1 shadow align-self-center"
+      style={style}
+    >
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>{props.description}</Card.Text>

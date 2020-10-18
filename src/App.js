@@ -2,16 +2,17 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import CategoryCard from './components/CategoryCard';
 import Header from './components/Header';
+import CardList from './components/CardList';
 import Footer from './components/Footer';
-
-import cardData from './cardData';
 
 function App() {
   return (
     <div
-      className="App d-flex justify-content-center align-items-center"
+      className="flex-md-row
+                 flex-xs-column
+                 justify-content-center 
+                 align-items-center align-items-xs-center"
       style={{
         backgroundColor: '#0c6291',
         width: '100vw',
@@ -19,13 +20,7 @@ function App() {
       }}
     >
       <Header />
-      {cardData.map((value, idx) => (
-        <CategoryCard
-          key={idx}
-          title={value.title}
-          description={value.description}
-        />
-      ))}
+      <CardList />
       <Footer />
     </div>
   );
