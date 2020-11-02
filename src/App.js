@@ -2,27 +2,28 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { Container, Col } from 'react-bootstrap';
+
 import Header from './components/Header';
 import CardList from './components/CardList';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div
-      className="flex-md-row
-                 flex-xs-column
-                 justify-content-center 
-                 align-items-center align-items-xs-center"
+    <Container
+      fluid
+      className="d-flex flex-column"
       style={{
         backgroundColor: '#0c6291',
-        width: '100vw',
         height: '100vh',
       }}
     >
-      <Header />
-      <CardList />
-      <Footer />
-    </div>
+      <Col>
+        <Header />
+        <CardList />
+        <Footer />
+      </Col>
+    </Container>
   );
 }
 

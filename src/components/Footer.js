@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Row } from 'react-bootstrap';
 import { Linkedin, GitHub, Mail } from 'react-feather';
 
 export default function Footer() {
   return (
-    <Navbar className="justify-content-center" fixed="bottom">
+    <Navbar className="justify-content-center">
       <Nav>
         <Nav.Link href="https://www.google.com" rel="noopener noreferrer">
           <Mail />
