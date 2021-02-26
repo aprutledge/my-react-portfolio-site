@@ -2,27 +2,34 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Col } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 
 import Header from './components/Header';
 import CardList from './components/CardList';
 import Footer from './components/Footer';
 
+import ProjectsService from './services/ProjectsService';
+
 function App() {
+  let projects = ProjectsService.getProjects();
+
   return (
     <Container
       fluid
-      className="d-flex flex-column"
       style={{
         backgroundColor: '#0c6291',
         height: '100vh',
       }}
     >
-      <Col>
-        <Header />
+      {/* <Header /> */}
+      <Container
+        fluid
+        className="d-flex align-items-center"
+        style={{ height: '75vh' }}
+      >
         <CardList />
-        <Footer />
-      </Col>
+      </Container>
+      {/* <Footer /> */}
     </Container>
   );
 }

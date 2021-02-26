@@ -6,16 +6,19 @@ import { Row } from 'react-bootstrap';
 
 export default function CardList() {
   return (
-    <React.Fragment>
-      {cardData.map((value, idx) => (
-        <Row className="h-100 d-md-flex">
-          <CategoryCard
-            key={idx}
-            title={value.title}
-            description={value.description}
-          />
-        </Row>
-      ))}
-    </React.Fragment>
+    <div className="cardList mx-auto my-auto">
+      <Row>
+        {cardData.map((value, idx) => (
+          <div className="col-xs-12 col-sm-6 col-md-4">
+            <CategoryCard
+              key={idx}
+              title={value.title}
+              description={value.description}
+              src={value.src}
+            />
+          </div>
+        ))}
+      </Row>
+    </div>
   );
 }
