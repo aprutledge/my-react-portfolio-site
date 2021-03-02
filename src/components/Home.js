@@ -9,18 +9,36 @@ import Projects from './Projects';
 import Footer from './Footer';
 
 const Home = () => {
-  const [home, setHome] = useState(null);
+  const [home, setHome] = useState('home');
   const navigateCards = (where) => {
     console.log(where);
     setHome(where);
   };
 
   if (home === 'projects') {
-    return <Projects />;
+    return (
+      <Projects
+        navigateCards={(where) => {
+          navigateCards(where);
+        }}
+      />
+    );
   } else if (home === 'aboutme') {
-    return <AboutMe />;
+    return (
+      <AboutMe
+        navigateCards={(where) => {
+          navigateCards(where);
+        }}
+      />
+    );
   } else if (home === 'resume') {
-    return <Resume />;
+    return (
+      <Resume
+        navigateCards={(where) => {
+          navigateCards(where);
+        }}
+      />
+    );
   } else {
     return (
       <CardList
