@@ -12,7 +12,7 @@ export default function CategoryCard(props) {
 
   return (
     <Card
-      className="h-100"
+      className="h-100 shadow-lg"
       style={{ minWidth: '200px', maxWidth: '375px', maxHeight: '600px' }}
     >
       <Card.Img
@@ -24,8 +24,11 @@ export default function CategoryCard(props) {
       />
       <Button
         variant="light"
-        href={'/' + props.title.replace(' ', '')}
+        //href={'/' + props.title.replace(' ', '')}
         style={{ textTransform: 'capitalize' }}
+        onClick={() => {
+          props.navigateCards(props.title);
+        }}
       >
         {props.title}
       </Button>
