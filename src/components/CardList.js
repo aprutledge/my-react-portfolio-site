@@ -1,21 +1,27 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
+
 import CategoryCard from './CategoryCard';
 import cardData from '../cardData';
 
-import { Row } from 'react-bootstrap';
+import '../App.css';
 
-export default function CardList() {
+export default function CardList({ navigateCards }) {
   return (
-    <React.Fragment>
-      {cardData.map((value, idx) => (
-        <Row className="h-100 d-md-flex">
-          <CategoryCard
-            key={idx}
-            title={value.title}
-            description={value.description}
-          />
-        </Row>
-      ))}
-    </React.Fragment>
+    <div className="cardList mx-auto my-auto">
+      <Row>
+        {cardData.map((value, idx) => (
+          <div key={idx} className="col-xs-12 col-sm-6 col-md-4">
+            <CategoryCard
+              id={value.id}
+              title={value.title}
+              description={value.description}
+              src={value.src}
+              navigateCards={navigateCards}
+            />
+          </div>
+        ))}
+      </Row>
+    </div>
   );
 }
