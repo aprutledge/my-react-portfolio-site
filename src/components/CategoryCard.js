@@ -1,12 +1,10 @@
 import React from 'react';
-import { Card, Button, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
 export default function CategoryCard(props) {
   return (
     <Card
-      className="h-100 shadow-lg"
+      className="h-100"
       style={{ minWidth: '200px', maxWidth: '375px', maxHeight: '600px' }}
     >
       <Card.Img
@@ -18,7 +16,6 @@ export default function CategoryCard(props) {
       />
       <Button
         variant="light"
-        //href={'/' + props.title.replace(' ', '')}
         style={{ textTransform: 'capitalize' }}
         onClick={() => {
           props.navigateCards(props.title.replace(' ', ''));
