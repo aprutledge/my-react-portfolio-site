@@ -4,12 +4,15 @@ const API_URL = 'https://api.github.com/users/';
 const USER = 'aprutledge';
 
 const getProjects = () => {
-  axios
-    .get(API_URL + USER + '/repos')
+  return axios
+    .get(API_URL + USER + '/repos?sort=updated')
     .then((res) => {
       console.log(res.data);
+      return res.data;
     })
-    .catch((err) => {});
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 export default {

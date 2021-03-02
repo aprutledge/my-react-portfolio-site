@@ -18,7 +18,7 @@ function App() {
       style={{
         height: '100vh',
         backgroundImage:
-          'url(' + process.env.PUBLIC_URL + '/resources/' + 'pattern.jpg' + ')',
+          'url(' + process.env.PUBLIC_URL + '/resources/pattern.jpg)',
       }}
     >
       <Header />
