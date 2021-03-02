@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 export default function CategoryCard(props) {
-  const style = {
-    backgroundColor: '#DADFF7',
-    color: '#000004',
-    minWidth: '10rem',
-  };
-
   return (
     <Card
       className="h-100 shadow-lg"
@@ -27,7 +21,7 @@ export default function CategoryCard(props) {
         //href={'/' + props.title.replace(' ', '')}
         style={{ textTransform: 'capitalize' }}
         onClick={() => {
-          props.navigateCards(props.title);
+          props.navigateCards(props.title.replace(' ', ''));
         }}
       >
         {props.title}

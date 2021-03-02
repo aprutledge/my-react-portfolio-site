@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Routes from './Routes';
 import Home from './components/Home';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,13 +16,14 @@ function App() {
       fluid
       className="d-flex flex-column justify-content-center"
       style={{
-        backgroundColor: '#0c6291',
         height: '100vh',
+        backgroundImage:
+          'url(' + process.env.PUBLIC_URL + '/resources/' + 'pattern.jpg' + ')',
       }}
     >
       <Header />
       <Home />
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 }

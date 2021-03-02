@@ -1,31 +1,19 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import { ArrowLeft } from 'react-feather';
 
+import '../App.css';
 const AboutMe = (props) => {
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
+    <Card
+      className="h-100 w-75 align-self-center shadow-lg mb-2"
+      style={{ minWidth: '200px', backgroundColor: '#f8f9fa' }}
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
+      <Button variant="light">
+        <ArrowLeft />
+      </Button>
+      <Card.Body className="w-75 align-self-center">I'm about me yo</Card.Body>
+    </Card>
   );
 };
 
