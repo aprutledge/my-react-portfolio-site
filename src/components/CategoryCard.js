@@ -17,9 +17,6 @@ export default function CategoryCard(props) {
       <Button
         variant="light"
         style={{ textTransform: 'capitalize' }}
-        onClick={() => {
-          props.navigateCards(props.title.replace(' ', ''));
-        }}
       >
         {props.title}
       </Button>
