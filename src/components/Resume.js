@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const Resume = (props) => {
   return (
     <Card
-      className="h-100 w-75 align-self-center align-content-center shadow-lg mb-2"
+      className="h-100 w-75 align-self-center align-content-center shadow-lg my-2"
       style={{ minWidth: '200px', backgroundColor: '#f8f9fa' }}
     >
       <Button
@@ -22,7 +22,7 @@ const Resume = (props) => {
       </Button>
       <div className="mx-auto overflow-auto">
         <Document
-          file={process.env.PUBLIC_URL + '/resources/alex resume.pdf'}
+          file={process.env.PUBLIC_URL + '/resources/20210302alexresume.pdf'}
           renderMode="svg"
         >
           <Page pageNumber={1} className="scale-down" />

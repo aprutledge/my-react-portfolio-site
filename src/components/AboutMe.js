@@ -6,7 +6,7 @@ import '../App.css';
 const AboutMe = (props) => {
   return (
     <Card
-      className="h-100 w-75 align-self-center shadow-lg mb-2"
+      className="h-100 w-75 align-self-center shadow-lg my-2"
       style={{ minWidth: '200px', backgroundColor: '#f8f9fa' }}
     >
       <Button
@@ -42,14 +42,16 @@ const AboutMe = (props) => {
           culinary school instead of returning to college for computer science.{' '}
         </p>
         <p>
-          I ended up decided that I wanted to do something technical for a
-          living so I resumed classes at University of Arkansas Little Rock. I
-          began trying to learn as much as I could about the concepts and new
-          technologies such as React. In my last semester at UALR, I got an
-          internship as a tester at Acxiom where I was eventually hired on full
-          time. In this role, I have learned skills that are helpful in
-          development roles such as troubleshooting and how to effectively
-          collaborate with coworkers.
+          In the end, I knew my true passion was with technology - though you
+          can catch me cooking up something fun and interesting at potlucks! I
+          went back to college at the University of Arkansas Little Rock to
+          finish my computer science degree. I was instantly hooked on all the
+          concepts and new technologies, such as React. I enjoy learning and
+          testing programs out in my freetime. During my final semester at UALR,
+          I was grateful to obtain an internship as a tester at Acxiom, which
+          led to my current full-time position. In this role, I have learned
+          skills that are helpful in development roles such as troubleshooting
+          and how to effectively collaborate with coworkers.
         </p>
       </Card.Body>
     </Card>
