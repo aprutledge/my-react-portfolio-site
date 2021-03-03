@@ -16,7 +16,7 @@ body {
 .card .card-body {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .card {
@@ -47,4 +47,8 @@ body {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.scale-down {
+  object-fit: scale-down;
 }

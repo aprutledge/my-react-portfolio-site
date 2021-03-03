@@ -16,7 +16,9 @@ const Projects = (props) => {
           ...projects,
           <div key={projectList[i].id}>
             <h3>{projectList[i].full_name}</h3>
-            <Nav.Link>{projectList[i].html_url}</Nav.Link>
+            <Button variant="secondary" href={projectList[i].html_url}>
+              GitHub Repo
+            </Button>
             <p>{projectList[i].description}</p>
           </div>,
         ]);
